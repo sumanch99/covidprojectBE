@@ -10,7 +10,7 @@ const users = require('./routes/users')
 const doctors = require('./routes/doctors')
 
 // connect to database process.env.MONGODB_URI
-mongoose.connect('mongodb+srv://sch:2311@cluster0.p2men.mongodb.net/covapp?retryWrites=true&w=majority',{ useNewUrlParser: true,useUnifiedTopology: true,useCreateIndex:true,useFindAndModify:false})
+mongoose.connect(process.env.MONGODB_URI,{ useNewUrlParser: true,useUnifiedTopology: true,useCreateIndex:true,useFindAndModify:false})
     .then(()=> console.log('Connected MongoDB'))
     .catch(() => console.error('Could Not Connect'));
 
