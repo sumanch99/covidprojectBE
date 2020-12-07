@@ -9,7 +9,7 @@ app.use(express.json())
 const users = require('./routes/users')
 const doctors = require('./routes/doctors')
 
-// connect to database process.env.MONGODB_URI
+// connect to database
 mongoose.connect(process.env.MONGODB_URI,{ useNewUrlParser: true,useUnifiedTopology: true,useCreateIndex:true,useFindAndModify:false})
     .then(()=> console.log('Connected MongoDB'))
     .catch(() => console.error('Could Not Connect'));
